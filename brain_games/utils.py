@@ -28,7 +28,7 @@ def random_operator():
     return choice(OPERATORS_LIST)
 
 def transform_bool(check_answer, result):
-    if  check_answer() == False:
+    if  check_answer == False:
         if result == True:    
             return YES
         else:

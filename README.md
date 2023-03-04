@@ -5,5 +5,5 @@
 A small pack of simple games.
 
 Requirements:
-python = "^3.10"
+python = "^3.8"
 prompt = "^0.4.1"
