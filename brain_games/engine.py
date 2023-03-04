@@ -15,7 +15,6 @@ def run_engine(current_game, description):
         result = str_result(result)
         print(question)
         answer = prompt.string('Your answer: ')
-        print(answer, result)
         if answer != result:
             return wrong_answer(answer, result, name)
         right_answer()
