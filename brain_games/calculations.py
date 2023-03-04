@@ -9,6 +9,7 @@ def random_even():
     type_result = type(result)
     return number, result, type_result
 
+
 def random_prime():
     prime_count = 0
     number = random_number()
@@ -18,6 +19,7 @@ def random_prime():
     result = prime_count == 2
     type_result = type(result)
     return number, result, type_result
+
 
 def random_progression():
     init_number = randint(0, 3)
@@ -33,6 +35,7 @@ def random_progression():
     type_result = type(result)
     return new_line, result, type_result
 
+
 def random_calc():
     number1 = random_number()
     number2 = random_number()
@@ -45,6 +48,7 @@ def random_calc():
         result = number1 * number2
     type_result = type(result)
     return number1, number2, calc, result, type_result
+
 
 def random_gcd():
     number1 = random_number()
