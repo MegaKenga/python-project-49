@@ -6,7 +6,8 @@ from brain_games.utils import random_number, random_operator
 def random_even():
     number = random_number()
     result = number % 2 == 0
-    return number, result
+    type_result = type(result)
+    return number, result, type_result
 
 def random_prime():
     prime_count = 0
@@ -15,7 +16,8 @@ def random_prime():
         if number % i == 0:
             prime_count += 1
     result = prime_count == 2
-    return number, result
+    type_result = type(result)
+    return number, result, type_result
 
 def random_progression():
     init_number = randint(0, 3)
@@ -28,7 +30,8 @@ def random_progression():
     result = line[random_index]
     line[random_index] = '..'
     new_line = " ".join(map(str, line))
-    return new_line, result
+    type_result = type(result)
+    return new_line, result, type_result
 
 def random_calc():
     number1 = random_number()
@@ -40,10 +43,12 @@ def random_calc():
         result = number1 - number2
     elif calc == '*':
         result = number1 * number2
-    return number1, number2, calc, result
+    type_result = type(result)
+    return number1, number2, calc, result, type_result
 
 def random_gcd():
     number1 = random_number()
     number2 = random_number()
     result = gcd(number1, number2)
-    return number1, number2, result
+    type_result = type(result)
+    return number1, number2, result, type_result

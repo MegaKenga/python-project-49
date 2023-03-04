@@ -1,6 +1,6 @@
 import prompt
 from brain_games.cli import greeting
-from brain_games.utils import check_answer, right_answer, wrong_answer, str_result, transform_bool
+from brain_games.utils import transform_bool, str_result, wrong_answer,  right_answer
 
 TRIES = 3
 
@@ -10,12 +10,12 @@ def run_engine(current_game, description):
     count_of_tries = 0
     print(description)
     while count_of_tries < TRIES:
-        question, result = current_game()
+        question, result, type_result = current_game()
+        result = transform_bool(type_result, result)
+        result = str_result(result)
         print(question)
         answer = prompt.string('Your answer: ')
-        check_answer(answer)
-        transform_bool(check_answer, result)
-        str_result(answer, result)
+        print(answer, result)
         if answer != result:
             return wrong_answer(answer, result, name)
         right_answer()

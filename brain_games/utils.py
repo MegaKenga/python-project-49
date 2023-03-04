@@ -1,3 +1,4 @@
+import prompt
 from random import randint, choice
 
 RANDOM_NUMBER_MIN = 0
@@ -6,13 +7,9 @@ OPERATORS_LIST = ['+', '-', '*']
 YES = 'yes'
 NO = 'no'
 
-def check_answer(answer):
-    return type(answer) is int
-
-def str_result(answer, result):
+def str_result(result):
     result = str(result)
-    answer = str(answer)
-    return result, answer
+    return result
 
 def right_answer():
     print('Correct!')
@@ -27,11 +24,12 @@ def random_number():
 def random_operator():
     return choice(OPERATORS_LIST)
 
-def transform_bool(check_answer, result):
-    if  check_answer == False:
-        if result == True:    
-            return YES
-        else:
-            return NO
-    else:
-        pass
+def transform_bool(type_result, result):
+    if type_result == bool:
+        if result == True:
+            result = YES
+        elif result == False:
+            result = NO
+        return result
+    elif type_result == int:
+        return result
