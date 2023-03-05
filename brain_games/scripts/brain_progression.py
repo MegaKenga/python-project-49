@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 from brain_games.engine import run_engine
-from brain_games.games.game_check_progression import check_progression, DESCRIPTION
+from brain_games.games.game_check_progression import check_progression
+from brain_games.games.game_check_progression import DESCRIPTION
 
 
 def main():

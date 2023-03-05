@@ -17,7 +17,8 @@ def right_answer():
 
 
 def wrong_answer(answer, result, name):
-    print(f"'{answer}' is wrong answer ;(. Correct answer was '{result}'. Let's try again, {name}!")
+    print(f"'{answer}' is wrong answer ;(. Correct answer was '{result}'."
+          f"Let's try again, {name}!")
 
 
 def random_number():

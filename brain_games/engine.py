@@ -1,6 +1,7 @@
 import prompt
 from brain_games.cli import greeting
-from brain_games.utils import transform_bool, str_result, wrong_answer, right_answer
+from brain_games.utils import transform_bool, str_result, wrong_answer
+from brain_games.utils import right_answer
 
 TRIES = 3
 
