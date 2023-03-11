@@ -7,11 +7,6 @@ YES = 'yes'
 NO = 'no'
 
 
-def str_result(result):
-    result = str(result)
-    return result
-
-
 def right_answer():
     print('Correct!')
 
@@ -29,12 +24,12 @@ def random_operator():
     return choice(OPERATORS_LIST)
 
 
-def transform_bool(type_result, result):
+def get_result(type_result, result):
     if type_result == bool:
         if result is True:
             result = YES
         elif result is False:
             result = NO
-        return result
+        return str(result)
     elif type_result == int:
-        return result
+        return str(result)
